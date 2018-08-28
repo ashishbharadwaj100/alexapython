@@ -1,10 +1,7 @@
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
-import json
-import requests
 import logging
 import os
-
 
 app = Flask(__name__)
 ask = Ask(app, '/')
