@@ -9,7 +9,9 @@ import os
 app = Flask(__name__)
 ask = Ask(app, '/')
 
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+if os.getenv('MYSPA_DEBUG_EN', False):
+    logging.getLogger('flask_ask').setLevel(logging.DEBUG)
+
 
 
 @ask.launch

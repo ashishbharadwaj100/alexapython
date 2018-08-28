@@ -1,1 +1,1 @@
-web: python3 alexa.py
+web: python alexa.py
