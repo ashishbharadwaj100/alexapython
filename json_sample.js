@@ -130,7 +130,7 @@
                 }
             ],
             "types": [
-                {
+                { 
                     "name": "ToggleEvents",
                     "values": [
                         {
