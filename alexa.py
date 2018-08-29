@@ -4,14 +4,13 @@ import logging
 import os
 
 app = Flask(__name__)
-ask = Ask(app, '/')
+ask = Ask(app, '/', methods=['GET', 'POST'])
 
 if os.getenv('MYSPA_DEBUG_EN', False):
     logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
 @ask.launch
 def my_spa():
-
     welcome_msg = render_template('welcome')
     return statement(welcome_msg)
 
