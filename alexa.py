@@ -4,7 +4,7 @@ import logging
 import os
 
 app = Flask(__name__)
-ask = Ask(app, '/', methods=['GET', 'POST'])
+ask = Ask(app, '/')
 
 if os.getenv('MYSPA_DEBUG_EN', False):
     logging.getLogger('flask_ask').setLevel(logging.DEBUG)
